@@ -1,3 +1,6 @@
 /vendor/
+/app/views/login/index_bkp.phtml
+/app/views/footer_bkp.phtml
+/app/views/header_bkp.phtml
 sftp-config.json
 /.data/
