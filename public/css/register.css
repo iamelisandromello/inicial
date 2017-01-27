@@ -4,7 +4,7 @@ body {
     height: 100%;
     font-family: 'Lato', Calibri, Arial, sans-serif;
     
-    background: #ddd url(../img/bg2_login.jpg) repeat top left;    
+    background: #ddd url(../img/bg2_cadastro.jpg) repeat bottom left;    
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -15,19 +15,4 @@ body {
     -webkit-font-smoothing: antialiased;
     overflow-y: scroll;
     overflow-x: hidden;
-}
-
-.main{
-	margin-top: 30px;
-	margin-bottom: 25px;
-}
-
-.panel-error{
-	align-content: center;
-	text-align: center;
-	border-color: #8a1e12;	
-}
-
-.panel-error h4{
-	color: white;
 }

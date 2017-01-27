@@ -9,7 +9,7 @@
 					
 					<section class="main">
 	                    <?php echo (isset($this->alert) ? $this->alert : ''); ?>
-	                    <form class="form-5 clearfix" action="<?php echo BASE; ?>login/logar/"  method="post">				
+	                    <form class="form-user clearfix" action="<?php echo BASE; ?>login/logar/"  method="post">				
 						    <p>
 						        <input type="text" name="username" id="username" value="<?php echo $this->request->post('username') ?>" placeholder="Username">       
 						        <input type="password" name="password" id="password" placeholder="Your Password">

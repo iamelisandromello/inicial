@@ -2,6 +2,12 @@
 
 class RecuperarController extends \HXPHP\System\Controller
 {
+
+    public function indexAction()
+    {
+        $this->view->setAssets('css', $this->configs->baseURI . 'public/css/recovery.css');
+    }
+
 	public function __construct($configs)
 	{
 		parent::__construct($configs);

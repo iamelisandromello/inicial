@@ -1,39 +1,4 @@
-                <div class="container">          
-                  <header>                  
-                    <h1> <strong>ProfileIT</strong> Sistema Colaborativo</h1>
-                    <h2>Otimize seus Relacionamnetos Profissionais</h2>         
-
-                    <div class="support-note">
-                      <span class="note-ie">Sorry, only modern browsers.</span>
-                    </div>
-                    
-                  </header>
-                  
-                  <section class="main">
-                    <?php echo (isset($this->alert) ? $this->alert : ''); ?>
-                    <form class="form-user clearfix" action="<?php echo BASE; ?>cadastro/cadastrar/"  method="post">        
-                      <p>
-                          <input required type="text" name="name" id="name" placeholder="Full Name" value="<?php echo $this->request->post('name') ?>">
-                          <input required type="email" name="email" id="email" placeholder="youremail@site.com" value="<?php echo $this->request->post('email') ?>">
-                          <input required type="text" name="username" id="username" placeholder="Username" value="<?php echo $this->request->post('username') ?>">
-                          <input required type="password" name="password" id="password" placeholder="Your Password">
-                      </p>
-                      <button type="submit" name="submit">
-                        <i class="fa fa-floppy-o"></i>
-                        <span>Register</span>
-                      </button>  
-                      <a href="login" >      
-                        <button type="button" id="cancel" value="cancel" name="cancel"> 
-                        <i class="fa fa-ban"></i>
-                        <span>Cancel</span>
-                      </button>
-                      </a>   
-                    </form>​​​​
-                  </section>
-                  
-                </div>
-
-                <!--<div class="panel-body">
+                <div class="panel-body">
                     <?php echo (isset($this->alert) ? $this->alert : ''); ?>
                     <form action="<?php echo BASE; ?>cadastro/cadastrar/" class="form-horizontal" method="post">
                       <div class="form-group">
@@ -66,4 +31,4 @@
                         </div>
                       </div>
                     </form>
-                </div>-->
+                </div>

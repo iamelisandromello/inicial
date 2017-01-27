@@ -4,10 +4,14 @@
 html { height: 100%; }
 
 body {
+    height: 100%;
     font-family: 'Lato', Calibri, Arial, sans-serif;
     
-    /*background: #ddd url(../img/bg2_login.jpg) repeat top left;*/
-    background: #eedfcc url(../img/bg2_login.jpg) no-repeat center top;*
+    background: #ddd url(../../img/bg2_login.jpg) repeat top left;
+    /*background: #eedfcc url(../../../<?php echo IMG; ?>bg2_login.jpg) no-repeat center top;*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
     
     font-weight: 300;
     font-size: 15px;
@@ -24,6 +28,7 @@ a {
 
 .container {
 	width: 100%;
+	min-height:100%;
 	position: relative;
 }
 
@@ -41,7 +46,7 @@ a {
 }
 
 .container > header {
-	margin-top: 50px;
+	margin-top: 75px;
 	padding: 20px 10px 10px 10px;
 	position: relative;
 	display: block;

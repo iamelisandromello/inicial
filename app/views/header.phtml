@@ -39,21 +39,15 @@
 
 	<link rel="stylesheet" href="<?php echo BOWER; ?>bootstrap/dist/css/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo BOWER; ?>font-awesome/css/font-awesome.min.css" type="text/css">
-	<link rel="stylesheet" href="<?php echo CSS; ?>main.css" type="text/css">
+	<!--<link rel="stylesheet" href="<?php echo CSS; ?>main.css" type="text/css">-->
 
-	<link rel="stylesheet" type="text/css" href="<?php echo CSS; ?>style/style.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo CSS; ?>style/nav.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo CSS; ?>style/footer.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo CSS; ?>style/copyright.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo CSS; ?>style/social.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo CSS; ?>login/login.css" />
 
-	<style>	
-		@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Handlee);
-		body {
-			background: #eedfcc url(<?php echo IMG; ?>bg2_login.jpg) no-repeat center top;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			background-size: cover;
-		}
 
-	</style>
 
 
 	<script src="<?php echo BOWER; ?>jquery/dist/jquery.min.js"></script>
@@ -66,31 +60,29 @@
 
 
 	<!-- ==============================================
-	        Navbar
+	    Navbar
 	=============================================== -->
-
 	<div id="home-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
-	  <div class="container">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-	      <a class="navbar-brand" href="#home"> 
-	        <!-- Logo Header -->
-	        <section id="foxin" class="foxin">
-	          <div> <img src="<?php echo IMG; ?>logo.png" alt="Foxin by Elisandro Mello"> </div>
-	        </section>
-	        <!--/ Logo Header--> 
-	      </a>
-	    </div>
-	    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#home">Home</a></li>
-	        <li><a href="#profile">Perfil</a></li>
-	        <li><a href="#servicos">Serviços</a></li>
-	        <li><a href="#skills">Skill Profissional</a></li>
-	        <li><a href="#contact">Contato</a></li>
-	      </ul>
-	    </div>
-	  </div>
+		 <div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			    <a class="navbar-brand" href="#home"> 
+				    <!-- Logo Header -->
+				    <section id="foxin" class="foxin">
+				    	<div> <img src="<?php echo IMG; ?>logo.png" alt="Foxin by Elisandro Mello"> </div>
+				    </section>
+				    <!--/ Logo Header--> 
+			    </a>
+			</div>
+			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+			    	<li><a href="/inicial/login">Home</a></li>
+			        <li><a href="recuperar">Recover Password</a></li>
+			        <li><a href="#history">Policy</a></li>
+			        <li><a href="#contact">Contact</a></li>
+			    </ul>
+			</div>
+		</div>
 	</div>
 
 
