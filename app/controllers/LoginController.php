@@ -49,4 +49,5 @@ class LoginController extends \HXPHP\System\Controller
 	{
 		return $this->auth->logout();
 	}
+
 }

@@ -1,0 +1,27 @@
+/* ==================================================
+   Blockquotes
+================================================== */
+
+blockquote {
+  	padding: 15px 20px;
+  	border-left: 2px solid #1abc9c;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+blockquote small {
+  	display: block;
+  	color: #65676c;
+  	font-weight:400;
+  	font-size: 14px;
+  	line-height: 20px;
+	margin-top: 10px;
+}
+
+blockquote small:before {
+  	content: '';
+}
