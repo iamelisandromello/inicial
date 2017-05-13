@@ -3,12 +3,11 @@
 class HomeController extends \HXPHP\System\Controller
 {
 	
-        public function indexAction()
-        {
-            $this->view->setHeader('home/header')
-                   ->setFooter('home/footer')                   
-                   ->setTitle('Oops! Nada encontrado!');
-        }
+    public function indexAction()
+    {
+        $this->view->setHeader('home/header')
+               ->setFooter('home/footer');
+    }
 
     public function __construct($configs)
 	{

@@ -2,7 +2,8 @@
 
 class PerfilController extends \HXPHP\System\Controller
 {
-	public function __construct($configs)
+
+    public function __construct($configs)
 	{
 		parent::__construct($configs);
 
@@ -31,6 +32,8 @@ class PerfilController extends \HXPHP\System\Controller
 	public function editarAction()
 	{
 		$this->view->setFile('editar');
+         $this->view->setHeader('home/header')
+            ->setFooter('home/footer');
 
 		$user_id = $this->auth->getUserId();
 
@@ -55,17 +58,17 @@ class PerfilController extends \HXPHP\System\Controller
 					$uploadUserImage = new upload($_FILES['image']);
 
 					if ($uploadUserImage->uploaded) {
-						$image_name = md5(uniqid());
-						$uploadUserImage->file_new_name_body = $image_name;
-						$uploadUserImage->file_new_name_ext = 'png';
-						$uploadUserImage->resize = true;
-						$uploadUserImage->image_x = 500;
-						$uploadUserImage->image_ratio_y = true;
+						$image_name = md5(uniqid()); //Cria nome Unico e converte em um Hash
+						$uploadUserImage->file_new_name_body = $image_name; //altera nome do arquivo
+						$uploadUserImage->file_new_name_ext = 'png'; //define extensão PNG
+						$uploadUserImage->resize = true;  //Habilita Resize da Imagem
+						$uploadUserImage->image_x = 500;  //Eixo x
+						$uploadUserImage->image_ratio_y = true; //redefine Eixo Y Proporcional a X
 
 						$dir_path = ROOT_PATH . DS . 'public' . DS . 'uploads' . DS . 'users' . DS . $atualizarUsuario->user->id . DS;
-						$uploadUserImage->process($dir_path);
+						$uploadUserImage->process($dir_path); //Executa o Processo de Upload para o diretório definido
 
-						if ($uploadUserImage->processed) {
+						if ($uploadUserImage->processed) { //valida se imagem foi processada c/ êxito
 							$uploadUserImage->clean();
 							$this->load('Helpers\Alert', array(
 								'success',
@@ -73,7 +76,7 @@ class PerfilController extends \HXPHP\System\Controller
 							));
 
 							if (!is_null($atualizarUsuario->user->image)) {
-								unlink($dir_path . $atualizarUsuario->user->image);
+								unlink($dir_path . $atualizarUsuario->user->image);//caso Imagem já exista apaga
 							}
 
 							$atualizarUsuario->user->image = $image_name . '.png';

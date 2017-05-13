@@ -11,19 +11,19 @@
                   
                   <section class="main">
                     <?php echo (isset($this->alert) ? $this->alert : ''); ?>
-                    <form class="form-user clearfix" action="<?php echo BASE; ?>cadastro/cadastrar/"  method="post">        
+                    <form action="<?php echo BASE; ?>cadastro/cadastrar/" class="form-user clearfix" method="post">                    
                       <p>
-                          <input required type="text" name="name" id="name" placeholder="Full Name" value="<?php echo $this->request->post('name') ?>">
-                          <input required type="email" name="email" id="email" placeholder="youremail@site.com" value="<?php echo $this->request->post('email') ?>">
-                          <input required type="text" name="username" id="username" placeholder="Username" value="<?php echo $this->request->post('username') ?>">
-                          <input required type="password" name="password" id="password" placeholder="Your Password">
+                        <input required type="text" name="name" class="form-control" id="name" placeholder="hxtutors" value="<?php echo $this->request->post('name') ?>">
+                        <input required type="email" name="email" class="form-control" id="email" placeholder="seuemail@site.com.br" value="<?php echo $this->request->post('email') ?>">
+                        <input required type="text" name="username" class="form-control" id="username" placeholder="hxtutors" value="<?php echo $this->request->post('username') ?>">
+                        <input required type="password" name="password" class="form-control" id="password" placeholder="Sua senha">
                       </p>
-                      <button type="submit" name="submit">
+                      <button type="submit">
                         <i class="fa fa-floppy-o"></i>
                         <span>Register</span>
-                      </button>  
-                      <a href="<?php echo BASE . 'cadastro/cancelar'; ?>">
-                      <!--<a href="login" >-->
+                      </button>
+                      <!--<button type="submit" class="btn btn-success">Cadastrar</button>-->
+                      <a href="login" >
                         <button type="button" id="cancel" value="cancel" name="cancel"> 
                         <i class="fa fa-ban"></i>
                         <span>Cancel</span>

@@ -1,7 +1,13 @@
             <header>
                 <div class="container">
                     <div class="avatar-top">
-                        <?php echo '<img class="avatar-lg wow bounceIn" src="' . BASE . 'public/uploads/users/' . $view_user->id . '/' . $view_user->image . '" width="160">';
+                        <?php
+                            if (!is_null($view_user->image)) {
+                                echo '<img class="avatar-lg wow bounceIn" src="' . BASE . 'public/uploads/users/' . $view_user->id . '/' . $view_user->image . '" width="160">';
+                            }
+                            else{
+                                echo '<img class="avatar-lg wow bounceIn" src="' . BASE . 'public/uploads/users/' . 'default' . '/' . 'default.png' . '" width="160">';
+                            }
                         ?>
                     </div>   
                 </div> <!--/container menu Social -->               

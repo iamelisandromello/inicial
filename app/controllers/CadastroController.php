@@ -46,9 +46,4 @@ class CadastroController extends \HXPHP\System\Controller
 			}
 		}
 	}
-
-    public function cancelarAction()
-    {
-        $this->redirectTo(login);       
-    }
 }

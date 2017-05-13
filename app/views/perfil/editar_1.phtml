@@ -1,3 +1,24 @@
+            <header>
+                <div class="container">
+                    <div class="avatar-top">
+                        <?php echo '<img class="avatar-lg wow bounceIn" src="' . BASE . 'public/uploads/users/' . $view_user->id . '/' . $view_user->image . '" width="160">';
+                        ?>
+                    </div>   
+                </div> <!--/container menu Social -->               
+            </header>
+
+            <avatar>
+                <div class="avatar-bottom">
+                    <div class="container">
+                        <div class="separator_1"></div>
+                            <h1><strong><?php echo $view_user->name; ?></strong></h1>
+                            <p>#User Experience    #Music    #Creative Direction</p>
+                        <div class="separator_1"></div>
+                    </div>
+                </div>
+            </avatar>
+
+
             <!-- ==============================================
             Main Start (Inicio do Corpo de Conteúdo)
             =============================================== -->
@@ -35,25 +56,6 @@
             <!-- ==============================================
                 Presentation (Apresentação Pessoal
             =============================================== -->
-            <header>
-                <div class="container">
-                    <div class="avatar-top">
-                        <?php echo '<img class="avatar-lg wow bounceIn" src="' . BASE . 'public/uploads/users/' . $view_user->id . '/' . $view_user->image . '" width="160">';
-                        ?>
-                    </div>   
-                </div> <!--/container menu Social -->               
-            </header>
-
-            <avatar>
-                <div class="avatar-bottom">
-                    <div class="container">
-                        <div class="separator_1"></div>
-                            <h1><strong><?php echo $view_user->name; ?></strong></h1>
-                            <p>#User Experience    #Music    #Creative Direction</p>
-                        <div class="separator_1"></div>
-                    </div>
-                </div>
-            </avatar>
             <section class="presentation" >
                 <div class="container">
                     <!-- TitleSection -->
@@ -62,7 +64,7 @@
                             <h2 class="title">Personal Data<span class="cursor-tag">_</span></h2>
                             <h3 class="title-description">Access and login information.</h3>
                         </div>
-                    </div>                               
+                    </div>
                     <!-- End Title Section -->
                     <?php 
 						echo (isset($this->alert) ? $this->alert : '');
@@ -73,7 +75,7 @@
 							'email' => $view_user->email
 						];
 
-						Form::open('form-user', $values, [
+						Form::open('editarusuario', $values, [
 							'action' => BASE . 'perfil/editar/',
 							'enctype' => 'multipart/form-data',
 							'prevent' => [
